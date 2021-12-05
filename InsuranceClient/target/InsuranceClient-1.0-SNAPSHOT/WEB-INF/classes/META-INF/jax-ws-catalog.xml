@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/Insurance/UsersService?WSDL" uri="wsdl/localhost_8080/Insurance/UsersService.wsdl"/>
+    <system systemId="http://localhost:8080/Insurance/UsersService?xsd=1" uri="wsdl/localhost_8080/Insurance/UsersService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Insurance/ProductsService?WSDL" uri="wsdl/localhost_8080/Insurance/ProductsService.wsdl"/>
+    <system systemId="http://localhost:8080/Insurance/ProductsService?xsd=1" uri="wsdl/localhost_8080/Insurance/ProductsService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/Insurance/ClaimsService?WSDL" uri="wsdl/localhost_8080/Insurance/ClaimsService.wsdl"/>
+    <system systemId="http://localhost:8080/Insurance/ClaimsService?xsd=1" uri="wsdl/localhost_8080/Insurance/ClaimsService.xsd_1.xsd"/>
+</catalog>

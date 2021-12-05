@@ -1,0 +1,9 @@
+my\services\Users.class
+com\mycompany\insurance\resources\JavaEE8Resource.class
+com\mycompany\insurance\JAXRSConfiguration.class
+my\services\Products.class
+my\services\Claims.class
+my\models\Product.class
+my\models\User.class
+my\models\Claim.class
+my\models\RegisteredProduct.class

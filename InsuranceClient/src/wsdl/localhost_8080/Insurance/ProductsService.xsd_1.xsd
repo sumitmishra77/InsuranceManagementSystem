@@ -1,0 +1,127 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services.my/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.my/">
+
+<xs:element name="addProduct" type="tns:addProduct"/>
+
+<xs:element name="addProductResponse" type="tns:addProductResponse"/>
+
+<xs:element name="getAllProduct" type="tns:getAllProduct"/>
+
+<xs:element name="getAllProductResponse" type="tns:getAllProductResponse"/>
+
+<xs:element name="getAllRegisteredProduct" type="tns:getAllRegisteredProduct"/>
+
+<xs:element name="getAllRegisteredProductResponse" type="tns:getAllRegisteredProductResponse"/>
+
+<xs:element name="getRegisteredProduct" type="tns:getRegisteredProduct"/>
+
+<xs:element name="getRegisteredProductByProductName" type="tns:getRegisteredProductByProductName"/>
+
+<xs:element name="getRegisteredProductByProductNameResponse" type="tns:getRegisteredProductByProductNameResponse"/>
+
+<xs:element name="getRegisteredProductBySerialNumner" type="tns:getRegisteredProductBySerialNumner"/>
+
+<xs:element name="getRegisteredProductBySerialNumnerResponse" type="tns:getRegisteredProductBySerialNumnerResponse"/>
+
+<xs:element name="getRegisteredProductResponse" type="tns:getRegisteredProductResponse"/>
+
+<xs:element name="registerProduct" type="tns:registerProduct"/>
+
+<xs:element name="registerProductResponse" type="tns:registerProductResponse"/>
+
+<xs:complexType name="getRegisteredProduct">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRegisteredProductResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registeredProduct" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registeredProduct">
+<xs:sequence>
+<xs:element name="productName" type="xs:string" minOccurs="0"/>
+<xs:element name="purchaseDate" type="xs:string" minOccurs="0"/>
+<xs:element name="serialNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="userName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllProduct">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllProductResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:product" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="product">
+<xs:sequence>
+<xs:element name="color" type="xs:string" minOccurs="0"/>
+<xs:element name="productName" type="xs:string" minOccurs="0"/>
+<xs:element name="serialNumber" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRegisteredProductByProductName">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRegisteredProductByProductNameResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registeredProduct" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRegisteredProductBySerialNumner">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRegisteredProductBySerialNumnerResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registeredProduct" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllRegisteredProduct">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllRegisteredProductResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:registeredProduct" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerProduct">
+<xs:sequence>
+<xs:element name="arg0" type="tns:registeredProduct" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="registerProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProduct">
+<xs:sequence>
+<xs:element name="arg0" type="tns:product" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addProductResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>

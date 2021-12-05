@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.4.3 (RELEASE-2.4.3-ad3323c; 2019-01-21T17:46:06+0000) JAXWS-RI/2.3.2 JAXWS-API/2.3.2 JAXB-RI/2.3.2 JAXB-API/2.3.2 git-revision#unknown. --><xs:schema xmlns:tns="http://services.my/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://services.my/">
+
+<xs:element name="addClaim" type="tns:addClaim"/>
+
+<xs:element name="addClaimResponse" type="tns:addClaimResponse"/>
+
+<xs:element name="approvedClaimCount" type="tns:approvedClaimCount"/>
+
+<xs:element name="approvedClaimCountResponse" type="tns:approvedClaimCountResponse"/>
+
+<xs:element name="canClaim" type="tns:canClaim"/>
+
+<xs:element name="canClaimResponse" type="tns:canClaimResponse"/>
+
+<xs:element name="getAllClaim" type="tns:getAllClaim"/>
+
+<xs:element name="getAllClaimResponse" type="tns:getAllClaimResponse"/>
+
+<xs:element name="getClaim" type="tns:getClaim"/>
+
+<xs:element name="getClaimByID" type="tns:getClaimByID"/>
+
+<xs:element name="getClaimByIDResponse" type="tns:getClaimByIDResponse"/>
+
+<xs:element name="getClaimResponse" type="tns:getClaimResponse"/>
+
+<xs:element name="updateStatus" type="tns:updateStatus"/>
+
+<xs:element name="updateStatusResponse" type="tns:updateStatusResponse"/>
+
+<xs:complexType name="addClaim">
+<xs:sequence>
+<xs:element name="arg0" type="tns:claim" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="claim">
+<xs:sequence>
+<xs:element name="claimCount" type="xs:string" minOccurs="0"/>
+<xs:element name="claimDate" type="xs:string" minOccurs="0"/>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="id" type="xs:int"/>
+<xs:element name="productName" type="xs:string" minOccurs="0"/>
+<xs:element name="serialNumber" type="xs:string" minOccurs="0"/>
+<xs:element name="status" type="xs:string" minOccurs="0"/>
+<xs:element name="userName" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addClaimResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateStatus">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateStatusResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClaimByID">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClaimByIDResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:claim" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="canClaim">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="canClaimResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClaim">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getClaimResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:claim" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllClaim">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllClaimResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:claim" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="approvedClaimCount">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="approvedClaimCountResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
